@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script src="shapes.js" defer></script>
+		<script src="canvas.js" defer></script>
+		<script src="engine.js" defer></script>
+		<title>Play With Shapes</title>
+	</head>
+	<body>
+		<div id="wrapper">
+			<section id="options">
+				<div>
+					<label for="x1">X:</label>
+					<input type="text" name="x1" id="x1">
+					<label for="y1">Y:</label>
+					<input type="text" name="y1" id="y1">
+					<label for="colorSelect">Color: </label>
+					<input type="color" name="colorSelect" id="colorSelct">
+				</div>
+				<div>
+					<label for="shape">Shape</label>
+					<select onchange="showOptions()" id="shape">
+						<option value="" disabled selected style="display:none;">--Choose--</option>
+						<option value="1">Triangle</option>
+						<option value="2">Circle</option>
+						<option value="3">Rectangle</option>
+						<option value="4">Segment</option>
+					</select>
+				</div>
+				<div id="ExtraPoints">
+					<label for="x2">X2:</label>
+					<input type="text" name="x2" id="x2">
+					<label for="y2">Y2:</label>
+					<input type="text" name="y2" id="y2">
+				</div>
+				<div id="TriangleExtraPoints">
+					<label for="x3">X3:</label>
+					<input type="text" name="x3" id="x3">
+					<label for="y3">Y3:</label>
+					<input type="text" name="y3" id="y3">
+				</div>
+				<div id="CircleExtra">
+					<label for="radius">Radius:</label>
+					<input type="text" name="radius" id="radius">
+				</div>
+				<div id="RectangleExtra">
+					<label for="width">Width:</label>
+					<input type="text" name="width" id="width">
+					<label for="height">Height:</label>
+					<input type="text" name="height" id="height">
+				</div>
+				<div id="dataField">
+					<div>
+						<select name="data" id="data" size="10">
+							
+						</select>
+					</div>
+					<div>
+						<button id="up" onclick="moveUp()">&#708;</button>
+						<button id="down" onclick="moveDown()">&#709;</button>
+						<button id="delete" onclick="deleteShape()">-</button>
+					</div>
+				</div>
+				<button id="add" onclick="addFigure()">Add</button>
+			</section>
+			<section id="canvasArea">
+				<canvas id="shapeCanvas" width="500" height="500"></canvas>
+			</section>
+		</div>
+	</body>
+</html>

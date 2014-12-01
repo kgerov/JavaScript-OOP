@@ -1,0 +1,17 @@
+#ExtraPoints, #TriangleExtraPoints, #CircleExtra, #RectangleExtra {
+	display: none;
+}
+
+#wrapper section div button {
+	display: block;
+}
+
+#wrapper section #dataField div {
+	display: inline-block;
+	vertical-align: top;
+}
+
+#wrapper section #dataField #data {
+	width: 400px;
+}
+
